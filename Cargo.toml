@@ -1,0 +1,19 @@
+[package]
+name = "lindirstat"
+version = "0.1.0"
+edition = "2021"
+description = "A WinDirStat-style disk usage visualizer for Linux, macOS and Windows"
+
+[dependencies]
+iced = { version = "0.14", features = ["canvas", "tokio"] }
+rayon = "1"
+trash = "5"
+rfd = "0.17"
+blake3 = "1"
+
+[profile.release]
+opt-level = "s"
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
