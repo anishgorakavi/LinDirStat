@@ -2,6 +2,9 @@
 
 Iced desktop app that scans a folder, draws a disk-usage treemap, suggests what to delete, and deletes from inside the app.
 
+README.md         User-facing overview: features, build/run flags, how sizes are computed, platform notes.
+AGENTS.md         Guide for AI agents: commands, architecture, invariants, performance rules, known gaps.
+CLAUDE.md         Imports AGENTS.md and adds Claude Code specific notes.
 Cargo.toml        Dependencies and the size-optimised release profile.
 src/              Application code.
   main.rs         Entry point, CLI flags, app state, update loop (scan pumping, selection, deletion) and all widgets.
